@@ -1,74 +1,297 @@
-/* Estilo Global */
+@font-face {
+    font-family: 'Sequel Sans';
+    src: url('fonts/Sequel Sans Bold Obl Head.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-Regular.ttf') format('truetype'); /* Asegúrate de que el archivo esté en el lugar correcto */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
-    color: #000;
-    background-color: #fff;
+    color: #333;
+    background: linear-gradient(135deg, #f4f4f4, #ddd);
 }
 
-h1, h2 {
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
+header {
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 5rem 0;
-    background: #fff;
-    overflow: hidden;
 }
 
-.hero h1 {
+.header-content h1, .header-content p {
     margin: 0;
-    font-size: 4rem;
-    background: linear-gradient(90deg, #FF6F61, #D64C3F);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    padding: 0;
 }
 
-.gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
+.header-content h1 {
+    font-size: 2.5em;
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.intro-content {
+    padding-left: 20px; /* Alineación hacia la izquierda */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.style-2 {
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-family: 'Sequel Sans', sans-serif;
+}
+
+.style-3 {
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    display: inline;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-family: 'Sequel Sans', sans-serif;
+}
+
+.style-green {
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(12,209,140,1) 0%, rgba(14,176,209,1) 16%);
+    background-clip: text;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-size: 2em;
+    font-family: 'Sequel Sans', sans-serif;
+}
+.style-blue {
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(38,12,209,1) 0%, rgba(151,14,209,1) 16%);
+    background-clip: text;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-size: 2em;
+    font-family: 'Sequel Sans', sans-serif;
+    
+}
+.style-red {
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgb(209, 12, 12) 0%, rgb(209, 99, 14) 16%);
+    background-clip: text;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-size: 2em;
+    font-family: 'Sequel Sans', sans-serif;
+} 
+.style-pink {
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(209,12,148,1) 0%, rgba(209,14,57,1) 16%);
+    background-clip: text;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-size: 2em;
+    font-family: 'Sequel Sans', sans-serif;
+} 
+.style-dif {
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(12,158,209,1) 0%, rgba(95,99,209,1) 8%, rgba(200,14,209,1) 16%);
+    background-clip: text;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-size: 2em;
+    font-family: 'Sequel Sans', sans-serif;
+} 
+.style-5 {
+    font-size: 1.2em; /* Aumentar tamaño de texto */
+    line-height: 1.6;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+    font-family: 'Manrope', sans-serif;
+}
+
+.glass-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 360px;
+    height: 202.5px;
+    overflow: hidden; /* Oculta parte de la imagen si es necesario */
+}
+
+.card-image {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255, 111, 97, 0.5), rgba(214, 76, 63, 0.5));
-    pointer-events: none;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área */
+    border-radius: 16px; /* Esquinas redondeadas */
 }
 
-/* Sección de Educación */
-.education {
-    padding: 2rem;
-    background-color: #fff;
+.glass-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: rgba(43, 92, 127, 0.5);
+    border-radius: 0 0 16px 16px;
+    backdrop-filter: blur(16.9px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
 }
 
-.education h2 {
-    font-size: 2rem;
-    font-style: italic;
-    background: linear-gradient(90deg, #FF6F61, #D64C3F);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.glass-overlay h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
-.education p {
-    font-size: 1.125rem;
-    line-height: 1.6;
+.glass-overlay p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 300;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
 
-    .education h2 {
-        font-size: 1.5rem;
-    }
+.carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Ajustar el ancho automáticamente */
+    box-sizing: border-box;
+    margin: 0 10px; /* Espaciado entre los elementos */
+}
+
+.carousel-button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    color: #333;
+    font-size: 2em;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0 solid rgb(229, 231, 235);
+}
+
+/* Estilo para el selector de idioma */
+#language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo ligeramente blanco y transparente */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 5px 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+}
+
+#language-selector option {
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#language-selector::-webkit-select-menu-button {
+    border: none;
+}
+
+#language-selector::-webkit-select-menu {
+    border: none;
+    box-shadow: none;
+}
+
+#language-selector::-webkit-select-menu {
+    border: none;
+    box-shadow: none;
+}
+
+#language-selector:focus {
+    outline: none;
 }
